@@ -8,6 +8,7 @@ cd e2
 
 ### Generar más carpetas
 mkdir src
+
 mkdir out
 
 ### Crear archivo
