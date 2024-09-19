@@ -23,5 +23,19 @@ public class E3 {
         for (int i = 0; i < valores.length; i += 2) {
             System.out.print(valores[i] + ", ");
         }
+
+        System.out.println();
+//        While
+        short i = 0;
+        while (++i <= 10){
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+//        do while
+        i = 1;
+        do {
+            System.out.print(i + " ");
+        } while (i++ < 10);
     }
 }
