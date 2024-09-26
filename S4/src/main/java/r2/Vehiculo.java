@@ -1,8 +1,17 @@
 package r2;
 
+import java.util.Arrays;
+
 public class Vehiculo {
     private Llanta[] llantas = new Llanta[4];
     private Combustible combustible = new Combustible();
+
+    public Vehiculo() {
+    }
+
+    public Vehiculo(Combustible combustible) {
+        this.combustible = combustible;
+    }
 
     public void setCombustible(Combustible combustible) {
         this.combustible = combustible;
@@ -17,6 +26,17 @@ public class Vehiculo {
 
     public void llenarTanque() {
         combustible.setLitrosActuales(combustible.getLitrosMaximos());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return true;
+
+        Vehiculo vehiculo = (Vehiculo) obj;
+
+        if (!Arrays.equals(llantas, vehiculo.llantas)) return false;
+        return combustible.equals(vehiculo.combustible);
     }
 
     public void avanza() {
