@@ -1,6 +1,6 @@
 package r2;
 
-public class R2 {
+public class Composicion {
     public static void main(String[] args) {
         Llanta llanta1 = new Llanta();
         llanta1.setAncho(205);
